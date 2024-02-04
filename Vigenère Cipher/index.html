@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenère Cipher</title>
+    <style>
+        body {
+            padding: 6em;
+        }
+        .body-box {
+            margin: auto;
+            width: 30em;
+            background-color: rgb(97, 175, 120);
+            padding: 3em; 
+            border-radius: 1.5em;
+            box-shadow: 0 0 8px 5px rgb(153, 153, 153);
+            border: 5px solid green;
+        }
+        .heading-box {
+            width: 100%;
+        }
+        h2 {
+            width: 7.8em;
+            margin: auto;
+        }
+        h4 {
+            font-style: oblique;  
+        }
+        input {
+            margin: 0.5em;
+            border: none;
+            height: 1.8em;
+            border-radius: 0.5em;
+        }
+        label {
+            font-weight: 700;
+        }
+        .key {
+            width: 7em;
+        }
+        .ptext {
+            width: 12em;
+        }
+        button {
+            width: 7em;
+            height: 1.8em;
+            border-radius: 0.5em;
+            border: none;
+            font-weight: bold;
+            background-color: rgb(144, 221, 128);
+        }
+        button:hover {
+            background-color: rgb(224, 255, 88);   
+        }
+        .output-d {
+            height: 7em;
+        }
+    </style>
+</head>
+<body>
+    <div class="body-box">
+        <div class="heading-box">
+            <h2>Vigenère Cipher</h2>
+        </div>
+        <div>
+            <h4>User Input</h4>
+            <label for="in-pTextVigC">Text:</label>
+            <input type="text" class="ptext" id="in-pTextVigC">
+            <label for="in-EncKeyVigC">Key:</label>
+            <input type="text" class="key" id="in-EncKeyVigC">
+            <button class="en-btn" id="btn-encrypt" onclick="vigenereCipherEnc()">Encrypt</button>
+        </div>
+        <div>
+            <label for="in-cTextVigC">Text:</label>
+            <input type="text" class="ptext" id="in-cTextVigC">
+            <label for="in-DeckeyVigC">Key:</label>
+            <input type="text" class="key" id="in-DeckeyVigC">
+            <button class="de-btn" id="btn-decrypt" onclick="vigenereCipherDec()">Decrypt</button>
+        </div>
+        <div class="output-d">
+            <h4>Display Output</h4>
+            <p id="dis-out-p">Plain Text : </p>
+            <p id="dis-out-k">Key : </p>
+            <p id="dis-out-c">Cipher Text : </p>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
